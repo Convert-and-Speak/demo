@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
 
-<title>CORRECT AND SPEAK: ACCENT REDUCTION WITH MINIMUM SUPERVISION | Correct and Speak</title>
+<title>CONVERT AND SPEAK: ACCENT CONVERSION WITH MINIMUM SUPERVISION | Correct and Speak</title>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,15 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Correct and Speak</h1>
-      <h2 class="project-tagline">Demo for "CORRECT AND SPEAK: ACCENT REDUCTION WITH MINIMUM SUPERVISION"</h2>      
+      <h1 class="project-name">Convert and Speak</h1>
+      <h2 class="project-tagline">Demo for "CONVERT AND SPEAK: ACCENT CONVERSION WITH MINIMUM SUPERVISION"</h2>      
       
     </section>
 
     <section class="main-content">
+<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set"><strong>Zero-shot Test</strong></h2>  
 
-<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set">20 test cases from VCTK</h2>
+<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set">&nbsp;&nbsp;&nbsp;&nbsp;20 test cases from VCTK</h2>
 <script>  
   document.addEventListener("DOMContentLoaded", function () {  
     let audioContainer = document.getElementById("audio-container");  
@@ -242,7 +243,7 @@
   </tbody>
 </table>
 
-<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set">10 test cases from L1-L2 ARCTIC</h2>
+<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set">&nbsp;&nbsp;&nbsp;&nbsp;10 test cases from L1-L2 ARCTIC</h2>
 
 <table style="width: 100%; table-layout: fixed;"> 
   <colgroup>  
@@ -354,6 +355,68 @@
   </tbody>
 </table>
 
+<h2 id="any-to-many-vc-demo-10-utterances-randomly-chosen-from-the-test-set"><strong>Sec 3.2 cases</strong></h2>
+
+<table style="width: 100%; table-layout: fixed;"> 
+  <colgroup>  
+    <col style="width: 30%;">  
+    <col style="width: 14%;">   
+    <col style="width: 14%;">  
+    <col style="width: 14%;">  
+    <col style="width: 14%;"> 
+    <col style="width: 14%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>Transcript</strong></th>
+      <th style="text-align: left"><strong>Native source Speech</strong></th>
+      <th style="text-align: left"><strong>Native Prompt </strong></th>
+      <th style="text-align: left"><strong>Generative model(ours) </strong></th>
+      <th style="text-align: left"><strong>Indian Prompt </strong></th>
+      <th style="text-align: left"><strong>Generative model(ours) </strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">The rainbow is a division of white light into many beautiful colors.</td> 
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/source/p226_007.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_native/clb_arctic_b0390.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:39:34/clb_arctic_b0390_p226_007_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_39_41_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_indian/asi_arctic_a0001.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:45:55/asi_arctic_a0001_p226_007_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_45_57_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+  </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left">There is , according to legend, a boiling pot of gold at one end.</td> 
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/source/p227_009.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_native/p225_056.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:39:34/p225_056_p227_009_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_39_41_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_indian/KSP_arctic_a0002.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:45:55/KSP_arctic_a0002_p227_009_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_45_57_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+ </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td style="text-align: left">People look, but no one ever finds it.</td> 
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/source/p228_010.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_native/rms_arctic_b0391.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:39:34/rms_arctic_b0391_p228_010_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_39_41_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_indian/RRBI_arctic_a0003.wav" controls="" preload="" style="width: 100%;"></audio></td>
+      <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:45:55/RRBI_arctic_a0003_p228_010_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_45_57_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+ </tr>
+</tbody>
+<tbody>
+  <tr>
+    <td style="text-align: left">The Greeks used to imagine that it was a sign from the gods to foretell war or heavy rain.</td> 
+    <td style="text-align: left"><audio src="iclr_final/sec3_2/source/p229_015.wav" controls="" preload="" style="width: 100%;"></audio></td>
+    <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_native/slt_arctic_b0392.wav" controls="" preload="" style="width: 100%;"></audio></td>
+    <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:39:34/slt_arctic_b0392_p229_015_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_39_41_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+    <td style="text-align: left"><audio src="iclr_final/sec3_2/ref_indian/SVBI_arctic_a0004.wav" controls="" preload="" style="width: 100%;"></audio></td>
+    <td style="text-align: left"><audio src="iclr_final/sec3_2/converted_test_can_del/hubert_depup_v2_top_102023-11-17_22:45:55/SVBI_arctic_a0004_p229_015_ar_epoch-40pt_nar_checkpoint-100000pt_2023_11_17_14_45_57_0.wav" controls="" preload="" style="width: 100%;"></audio></td>
+</tr>
+</tbody>
+</table>
 
 
     <!-- </section> -->
